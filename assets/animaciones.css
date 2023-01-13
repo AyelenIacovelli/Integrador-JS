@@ -1,0 +1,71 @@
+:root {
+    --blanco: rgb(255, 255, 255);
+    --verde: rgb(10, 137, 129);
+    --crema: rgb(235, 206, 188);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+    height: calc(100vh - 100px);
+    width: 100%;
+    background: rgba(10, 137, 129, .6);
+    backdrop-filter: blur(5px);
+    display: none;
+}
+
+/* OVERLAY POR JS */
+.show-overlay {
+    display: block;
+}
+
+/* NAVBAR */
+.navbar-list li {
+    position: relative;
+    padding: 0;
+}
+
+.navbar-list li a::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--crema);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease;
+}
+
+.navbar-list li a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+/* CARRITO */
+.cart-icon,
+.menu-icon,
+.user-icon {
+    transition: all 0.2s ease-out;
+}
+
+.cart-icon:hover,
+.menu-icon:hover,
+.user-icon:hover {
+    color: var(--crema);
+    transition: all 0.2s ease-in;
+}
+
+/* NOSOTROS */
+.info a:hover {
+    color: var(--crema);
+}

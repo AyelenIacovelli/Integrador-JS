@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grevery</title>
+    <!-- RELACION CSS -->
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/animaciones.css">
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
+    <!-- RELACION FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- LOGO -->
+        <img src="./assets/imagenes/logo blanco.png" alt="logo" class="logo">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <!-- ICONO MENU -->
+            <div class="menu-label">
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </div>
+            <!-- NAVBAR LIST -->
+            <ul class="navbar-list">
+                <li><a href="#hero" class="navbar-link">Home</a></li>
+                <li><a href="#nosotros" class="navbar-link">Nosotros</a></li>
+                <li><a href="#noticias" class="navbar-link">Noticias</a></li>
+                <li><a href="#productos" class="navbar-link">Productos</a></li>
+                <li><a href="#delivery" class="navbar-link">Delivery</a></li>
+                <li><a href="#contacto" class="navbar-link">Contacto</a></li>
+                <li><i class="fa-solid fa-user user-icon"><a href="./assets/Inicio/index.html"></a></i></li>
+            </ul>
+            <!-- CARRITO -->
+            <div class="cart-label">
+                <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                <div class="cart-bubble"></div>
+            </div>
+            <div class="cart">
+                <h2>Tus productos</h2>
+                <div class="cart-container"></div>
+                <span class="divider"></span>
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <span class="total"></span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar carrito</button>
+            </div>
+            <!-- OVERLAY -->
+            <div class="overlay"></div>
+        </nav>            
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- HERO -->
+        <section id="hero">
+            <video autoplay loop muted>
+                <source src="./assets/imagenes/video.mp4" class="video">
+                Tu navegador no soporta videos
+            </video>
+        </section>
+        <!-- NOSOTROS -->
+        <section id="nosotros">
+            <div class="container">
+                <div class="image">
+                    <img src="./assets/imagenes/exterior.jpg" alt="Exterior de la Chocolatería">
+                </div>
+                <div class="info">
+                    <h1>Chocolatería & Resto</h1>
+                    <p>Tenemos mucha pasión por los detalles y algo de manía sobreprotectora que nos lleva a querer darte todos los gustos.
+                    Si hay un lugar en especial donde siempre suceden cosas maravillosas, es en nuestra exclusiva Chocolatería ubicada a orillas del lago del fuerte, Tandil.</p>
+                    <a href="#contacto">¿Cómo llegar?</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="info">
+                    <h2>Chocolate gourmet</h2>
+                    <p>Nuestro chocolate no contiene conservantes, colorantes  ni saborizantes artificiales. A base de chocolate puro, azúcar orgánica,  manteca de cacao y frutas orgánicas, cuidamos la producción, el entorno y el cuerpo desde el momento cero de su elaboración.</p>
+                    <a href="#delivery">¡Envío a domicilio!</a>
+                </div>
+                <div class="image">
+                    <img src="./assets/imagenes/cafe canela choco.jpg" alt="Foto de chocolate">
+                </div>
+            </div>
+        </section>
+        <section id="noticias"></section>
+        <section id="productos"></section>
+        <section id="delivery"></section>
+        <section id="contacto"></section>
+
+        
+
+
+    </main>
+    <!-- FOOTER -->
+    <footer></footer>
+    <!-- MODAL -->
+    <div class="add-modal"></div>
+    <!-- RELACION JS -->
+    <script src="./assets/index.js"></script>
+    <script src="./assets/data.js"></script>    
+</body>
+</html>

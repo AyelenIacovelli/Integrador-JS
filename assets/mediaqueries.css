@@ -1,0 +1,42 @@
+/* PARA TABLET */
+@media (max-width: 992px) {
+
+    /* NAVBAR */
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar-list {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        flex-direction: column;
+        background: var(--verde);
+        z-index: 3;
+        display: none;
+        gap: 25px;
+    }
+
+    /* MOSTRAR ICONO MENU */
+    .menu-label {
+        display: flex;
+        order: 2;
+        cursor: pointer;
+    }
+
+    /* BOTON MENU */
+    .menu-icon {
+        font-size: 20px;
+        color: var(--blanco);
+        font-weight: 600;
+    }
+
+    /* ABRIR MENU HAMBURGUESA PARA JS */
+    .open-menu {
+        display: flex;
+    }
+
+
+}
+
+/* PARA CELULAR */

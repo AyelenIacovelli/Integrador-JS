@@ -1,0 +1,219 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* COLORES */
+:root {
+    --blanco: rgb(255, 255, 255);
+    --verde: rgb(10, 137, 129);
+    --crema: rgb(235, 206, 188);
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background: var(--blanco);
+}
+
+/* SECTION GENERAL */
+section {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HEADER */
+header {
+    background: none;
+    width: 100%;
+    max-width: 1400px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    /* margin: 0 auto; */
+}
+
+/* LOGO */
+.logo {
+    height: 100%;
+}
+
+/* NAVBAR */
+.navbar,
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    gap: 20px;
+}
+
+.navbar-list {
+    gap: 40px;
+}
+
+.navbar-list a {
+    color: var(--blanco);
+    font-size: 18px;
+}
+
+.navbar-list li:first-child>a {
+    font-weight: 600;
+}
+
+/* CARRITO */
+.cart-icon,
+.menu-icon,
+.user-icon {
+    font-size: 20px;
+    font-size: 600;
+    color: var(--blanco);
+    cursor: pointer;
+    position: relative;
+}
+
+.cart {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background: var(--blanco);
+    border-left: 1px solid var(--verde);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    z-index: 2;
+    min-width: 290px;
+    transform: translate(200%);
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+cart::-webkit-scrollbar {
+    display: none;
+}
+
+.cart h2 {
+    color: var(--verde);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* TOGGLE DEL CARRITO PARA JS */
+.open-cart {
+    transform: translate(0%);
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+/* MENU LABEL */
+.menu-label {
+    display: none;
+}
+
+
+/* HERO */
+#hero {
+    max-width: unset;
+    height: 100hv;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -100px;
+}
+
+video {
+    width: 100%;
+}
+
+
+/* NOSOTROS */
+#nosotros {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./imagenes/bg\ patron.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: -100px;
+}
+
+.container {
+    flex-direction: row;
+}
+
+.image,
+.info {
+    width: 50%;
+}
+
+.image img {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+}
+
+.info {
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 20px;
+}
+
+.info a {
+    background: var(--verde);
+    border-radius: 1rem;
+    color: var(--blanco);
+    font-size: 22px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* COLOR BTN CATEGORIA PARA JS */
+.active {
+    background: var(--crema);
+}
+
+/* OCULTAR BTN VER MAS PARA JS */
+.hidden {
+    display: none;
+}
