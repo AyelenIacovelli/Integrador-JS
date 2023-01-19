@@ -1,6 +1,17 @@
 /* PARA TABLET */
 @media (max-width: 992px) {
 
+    /* HEADER */
+    header {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    /* LOGO */
+    .logo {
+        height: 80%;
+    }
+
     /* NAVBAR */
     .navbar {
         gap: 12px;
@@ -36,7 +47,111 @@
         display: flex;
     }
 
+    /* HERO */
 
+
+
+    /* NOSOTROS */
+    #nosotros {
+        margin-top: -53px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .image,
+    .info {
+        width: 100%;
+    }
+
+    .order {
+        order: 2;
+    }
+
+    /* PRODUCTOS */
+    .galeria {
+        grid-auto-columns: auto;
+    }
+
+    /* CONTACTO */
+    .contacto {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .direccion,
+    .telefono,
+    .horario,
+    .mail {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 10px;
+        border-right: 2px solid black;
+    }
+
+    .datos,
+    .mapa {
+        width: unset;
+        align-items: center;
+    }
 }
 
 /* PARA CELULAR */
+
+@media (max-width: 576px) {
+
+    /* HEADER */
+    header {
+        background-color: var(--verde);
+    }
+
+    /* HERO */
+    #hero {
+        display: none;
+    }
+
+    /* NOSOTROS */
+    #nosotros {
+        margin-top: 0;
+    }
+
+    .order {
+        order: unset;
+    }
+
+    .mq-order {
+        order: 2;
+    }
+
+    .info {
+        align-items: center;
+        text-align: justify;
+    }
+
+    .info p {
+        text-align: center;
+    }
+
+    h1,
+    .info h2 {
+        text-align: center;
+    }
+
+    /* CONTACTO */
+    .mapa {
+        display: none;
+    }
+
+    .datos p {
+        text-align: center;
+    }
+
+    /* FOOTER */
+
+    footer p {
+        text-align: center;
+    }
+
+}

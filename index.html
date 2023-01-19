@@ -16,7 +16,7 @@
     <!-- HEADER -->
     <header>
         <!-- LOGO -->
-        <img src="./assets/imagenes/logo blanco.png" alt="logo" class="logo">
+        <img src="./assets/imagenes/logo blanco.png" alt="logo" class="logo blanco">
         <!-- NAVBAR -->
         <nav class="navbar">
             <!-- ICONO MENU -->
@@ -29,9 +29,9 @@
                 <li><a href="#nosotros" class="navbar-link">Nosotros</a></li>
                 <li><a href="#noticias" class="navbar-link">Noticias</a></li>
                 <li><a href="#productos" class="navbar-link">Productos</a></li>
-                <li><a href="#delivery" class="navbar-link">Delivery</a></li>
+                <li><a href="./assets/delivery/index.html" class="navbar-link">Delivery</a></li>
                 <li><a href="#contacto" class="navbar-link">Contacto</a></li>
-                <li><i class="fa-solid fa-user user-icon"><a href="./assets/Inicio/index.html"></a></i></li>
+                <li><a href="./assets/Inicio/index.html"><i class="fa-solid fa-user user-icon"></i></a></li>
             </ul>
             <!-- CARRITO -->
             <div class="cart-label">
@@ -65,7 +65,7 @@
         <!-- NOSOTROS -->
         <section id="nosotros">
             <div class="container">
-                <div class="image">
+                <div class="image order">
                     <img src="./assets/imagenes/exterior.jpg" alt="Exterior de la Chocolatería">
                 </div>
                 <div class="info">
@@ -76,31 +76,101 @@
                 </div>
             </div>
             <div class="container">
-                <div class="info">
+                <div class="info mq-order">
                     <h2>Chocolate gourmet</h2>
                     <p>Nuestro chocolate no contiene conservantes, colorantes  ni saborizantes artificiales. A base de chocolate puro, azúcar orgánica,  manteca de cacao y frutas orgánicas, cuidamos la producción, el entorno y el cuerpo desde el momento cero de su elaboración.</p>
-                    <a href="#delivery">¡Envío a domicilio!</a>
+                    <p>Pensamos en cada detalle para que llegue a tus manos de forma única.</p>                    
+                    <a href="./assets/delivery/index.html">¡Envío a domicilio!</a>
                 </div>
                 <div class="image">
                     <img src="./assets/imagenes/cafe canela choco.jpg" alt="Foto de chocolate">
                 </div>
             </div>
+            <div class="container">
+                <div class="image">
+                    <img src="./assets/imagenes/exterior dia.jpg" alt="Foto de mesa servida">
+                </div>
+                <div class="info">
+                    <h2>Experiencia Grevery</h2>
+                    <p>Lo que vas a encontrar aquí es la calidez y la hospitalidad de siempre mezclada, como nunca, con los más exquisitos chocolates, alfajores, bombones, tabletas, trufas y otras dulzuras premium.</p>
+                    <p>¡Te invitamos a descubrir esta nueva y sofisticada experiencia Chocolatería Grevery!</p>
+                    <a href="#productos">¡Echa un vistazo a nuestros productos!</a>
+                </div>
+            </div>
         </section>
-        <section id="noticias"></section>
-        <section id="productos"></section>
+        <section id="noticias">
+            <h2>Noticias</h2>
+            <div class="cards-container" id="slider">
+                <div class="card-info">
+                    <h3>¡Veganos!</h3>
+                    <img src="./assets/imagenes/choco vegano.jpg" alt="Foto de chocolate vegano">
+                    <p>Probá también nuestros chocolates veganos</p>
+                    <span>¡Te van a sorprender!</span>
+                </div>
+                <div class="card-info">
+                    <h3>¡Sé parte de nuestra comunidad!</h3>
+                    <img src="./assets/imagenes/interior.jpg" alt="Interior de la chocolatería">
+                    <p>Si tenés nuestra tarjeta de socio, todos los martes disfrutá de un 20% de descuento en toda tu compra consumiendo en el local.</p>
+                    <span>¡Retirala en el local!</span>
+                </div>
+                <div class="card-info">
+                    <h3>Lago del Fuerte</h3>
+                    <img src="./assets/imagenes/lago.jpg" alt="Foto del lago">
+                    <p>Nos encontramos a orillas de las 19 hectáreas de superficie de agua que nos brinda el Lago del Fuerte. Sin dudas poseemos la ubicación más maravillosa de todo Tandil.</p>
+                    <span>¡Somos tú espacio soñado!</span>
+                </div>
+                <div class="chevron post" id="chevron-post"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="chevron pre" id="chevron-pre"><i class="fa-solid fa-chevron-left"></i></div>
+            </div>
+        </section>
+        <section id="productos">
+            <h2>Algunas de nuestras delicias</h2>
+            <div class="galeria">
+                <img src="./assets/imagenes/productos/torta.jpg" alt="foto de torta"><img src="./assets/imagenes/productos/alfajores.jpg" alt="foto de alfajores"><img src="./assets/imagenes/productos/animales.png" alt="foto de animales de chocolate"><img src="./assets/imagenes/productos/budin choco navidad.jpg" alt="foto de budin de chocolate"><img src="./assets/imagenes/productos/budin navidad.jpg" alt="foto de budin de chocolate blanco"><img src="./assets/imagenes/productos/chocolates.jpg" alt="foto de chocolates"><img src="./assets/imagenes/productos/merienda.jpg" alt="foto de chocolate"><img src="./assets/imagenes/productos/mouse frutos rojos.jpg" alt="foto de torta mousse"><img src="./assets/imagenes/productos/pan dulce blanco.jpg" alt="foto de pan dulce"><img src="./assets/imagenes/productos/pan dulce negro.jpg" alt="foto de pan dulce de chocolate"><img src="./assets/imagenes/productos/papa noel.jpg" alt="foto de papa noel de chocolate"><img src="./assets/imagenes/productos/strudel.jpg" alt="foto de strudel de manzana"><img src="./assets/imagenes/productos/trufas.jpg" alt="foto de trufas"><img src="./assets/imagenes/productos/turron.jpg" alt="foto de turron"><img src="./assets/imagenes/productos/variedad choco.jpg" alt="foto de chocolate"><img src="./assets/imagenes/productos/variedad chocos.jpg" alt="foto de chocolate"><img src="./assets/imagenes/productos/calidad calidez.jpg" alt="foto de chocolate">
+            </div>
+            <p>¡Comprá en nuestra tienda online y lo llevamos a tu casa!</p>
+            <a href="./assets/delivery/index.html">Delivery</a>
+        </section>
         <section id="delivery"></section>
-        <section id="contacto"></section>
+        <section id="contacto">
+            <h2>¡Te estamos esperando!</h2>
+            <div class="contacto">
+                <div class="datos">
+                    <div class="direccion">
+                        <h3>Dirección:</h3>
+                        <p>Dr. Saavedra Lamas 500, Tandil</p>
+                    </div>
+                    <div class="horario">
+                        <h3>Horario:</h3>
+                        <p>De 07:00hs a 00:00hs</p>
+                    </div>
+                    <div class="telefono">
+                        <h3>Teléfono:</h3>
+                        <p>0249 442-6282</p>
+                    </div>
+                    <div class="mail">
+                        <h3>Email:</h3>
+                        <p>grevery@chocolateria.com</p>
+                    </div>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2667.205168442299!2d-59.13056389928535!3d-37.345838078858165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911fb417317cbb%3A0x32f162da80203301!2sDam%20Beach!5e0!3m2!1ses-419!2sar!4v1673898577821!5m2!1ses-419!2sar" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
 
         
 
 
     </main>
     <!-- FOOTER -->
-    <footer></footer>
+    <footer>
+        <p>Ayelén Iacovelli - Todos los derechos reservados 2023</p>
+    </footer>
     <!-- MODAL -->
     <div class="add-modal"></div>
     <!-- RELACION JS -->
-    <script src="./assets/index.js"></script>
-    <script src="./assets/data.js"></script>    
+    <script src="./assets/data.js"></script>
+    <script src="./assets/main.js"></script>  
 </body>
 </html>

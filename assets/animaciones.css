@@ -66,6 +66,7 @@ html {
 }
 
 /* NOSOTROS */
-.info a:hover {
+.info a:hover,
+#productos a:hover {
     color: var(--crema);
 }

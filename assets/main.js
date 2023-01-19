@@ -66,6 +66,51 @@ const closeOnOverlayClick = (e) => {
 };
 
 
+// CAMBIO COLOR HEADER
+const header = document.querySelector("header");
+
+const scrollHeader = () => {
+    header.classList.toggle("down", window.scrollY > 0);
+}
+
+
+// SLIDER EN NOTICIAS
+const slider = document.querySelector("#slider");
+let sliderSection = document.querySelectorAll(".card-info");
+let sliderSectionLast = sliderSection[sliderSection.length - 1];
+const chevronPost = document.querySelector("#chevron-post");
+const chevronPre = document.querySelector("#chevron-pre");
+
+// PONGO ULTIMA IMG COMO PRIMERA
+slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+
+// FUNCION PARA MOVER SIGUIENTE
+const next = () => {
+    let sliderSectionFirst = document.querySelectorAll(".card-info")[0];
+    slider.style.marginLeft = "-200%";
+    slider.insertAdjacentElement("beforeend", sliderSectionFirst);
+    slider.style.marginLeft = "-100%";
+
+}
+
+// FUNCION PARA MOVER ANTERIOR
+const prev = () => {
+    let sliderSection = document.querySelectorAll(".card-info");
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    slider.style.marginLeft = "0";
+    slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+    slider.style.marginLeft = "-100%";
+
+}
+
+// FUNCION PARA QUE SE MUEVA AUTOMATICAMENTE
+setInterval = (function () {
+    Next();
+}, 5000);
+
+
+
+
 // MOSTRAR PRODUCTOS EN PAGINA
 
 // CONTENEDOR DE PRODUCTOS
@@ -187,6 +232,10 @@ const init = () => {
     window.addEventListener("scroll", closeOnScroll);
     overlay.addEventListener("click", closeOnOverlayClick);
     renderProducts();
+    window.addEventListener("scroll", scrollHeader);
     categories.addEventListener("click", applyFilter);
     btnLoad.addEventListener("click", showMoreProducts);
+
+    chevronPost.addEventListener("click", next);
+    chevronPre.addEventListener("click", prev);
 };

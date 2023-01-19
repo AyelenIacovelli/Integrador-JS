@@ -1,0 +1,128 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* COLORES */
+:root {
+    --blanco: rgb(255, 255, 255);
+    --verde: rgb(10, 137, 129);
+    --crema: rgb(235, 206, 188);
+}
+
+/* GENERAL */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../../imagenes/bg\ patron.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 750px;
+    height: 100vh;
+    padding: 30px;
+}
+
+.photo,
+.photo-inicio {
+    background-size: cover;
+    background-position: center;
+    max-width: 750px;
+    width: 50%;
+    height: 100vh;
+}
+
+.photo {
+    background-image: url(../../imagenes/exterior\ dia.jpg);
+}
+
+.photo-inicio {
+    background-image: url(../../imagenes/lago.jpg);
+}
+
+.self {
+    align-self: flex-start;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+    border-radius: 1rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--verde);
+}
+
+form input {
+    padding: 5px 12px;
+    width: 220px;
+    border: none;
+    outline: none;
+    background: var(--blanco);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+.btn {
+    align-self: center;
+    background: var(--verde);
+    color: var(--crema);
+    border-radius: 1rem;
+    padding: 10px 15px;
+}
+
+.question {
+    color: var(--verde);
+}
+
+/* ERROR PARA JS */
+.form__field.error input {
+    border: 1px solid #dc3545;
+}
+
+.form__field small {
+    color: #dc3545;
+    max-width: 350px;
+    text-align: center;
+    padding: 7px 0;
+}
+
+/* EXITO PARA JS */
+.form__field.success input {
+    border: 1px solid #28a745;
+}

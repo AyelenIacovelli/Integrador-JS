@@ -6,6 +6,7 @@
     --blanco: rgb(255, 255, 255);
     --verde: rgb(10, 137, 129);
     --crema: rgb(235, 206, 188);
+    --crema-t: rgba(235, 206, 188, 0.5);
 }
 
 /* GENERAL */
@@ -31,10 +32,10 @@ main {
 /* SECTION GENERAL */
 section {
     width: 100%;
-    max-width: 1400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px 10px;
 }
 
 /* HEADER */
@@ -50,6 +51,11 @@ header {
     justify-content: space-around;
     z-index: 10;
     /* margin: 0 auto; */
+}
+
+/* HEADER PARA JS */
+header.down {
+    background-color: var(--verde);
 }
 
 /* LOGO */
@@ -115,7 +121,7 @@ header {
     gap: 20px;
 }
 
-cart::-webkit-scrollbar {
+.cart::-webkit-scrollbar {
     display: none;
 }
 
@@ -136,14 +142,13 @@ cart::-webkit-scrollbar {
     display: none;
 }
 
-
 /* HERO */
 #hero {
     max-width: unset;
-    height: 100hv;
     object-fit: cover;
     object-position: center;
     margin-top: -100px;
+    padding: unset;
 }
 
 video {
@@ -161,8 +166,13 @@ video {
     margin-top: -100px;
 }
 
+#nosotros img {
+    border-radius: 1rem;
+}
+
 .container {
-    flex-direction: row;
+    display: flex;
+    width: 100%;
 }
 
 .image,
@@ -177,15 +187,17 @@ video {
 }
 
 .info {
-    padding: 0 30px;
+    padding: 10px 30px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    gap: 10px;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
+    text-shadow: 4px 4px 3px var(--verde);
 }
 
 .info p {
@@ -193,12 +205,16 @@ h1 {
 }
 
 .info a {
-    background: var(--verde);
+    /* background: var(--verde); */
+    background-image: url(./imagenes/bg\ aqua\ 1.jpg);
+    background-position: center;
+    background-size: contain;
     border-radius: 1rem;
     color: var(--blanco);
     font-size: 22px;
     padding: 5px 10px;
     text-align: center;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
 
 
@@ -216,4 +232,224 @@ h1 {
 /* OCULTAR BTN VER MAS PARA JS */
 .hidden {
     display: none;
+}
+
+
+
+
+/* NOTICIAS */
+#noticias {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.cards-container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; */
+    width: 300%;
+    height: 400px;
+    margin-left: -100%;
+}
+
+.card-info {
+    width: 100%;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    border-radius: 1rem;
+    text-align: center; */
+}
+
+.card-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    display: block;
+
+}
+
+.chevron {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: var(--crema);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post {
+    right: 10px;
+}
+
+.pre {
+    left: 10px;
+}
+
+/* PRODUCTOS */
+#productos {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background: url(./imagenes/bg\ patron.jpg);
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.galeria {
+    max-width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria img {
+    width: 250px;
+    height: 250px;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--crema);
+}
+
+#productos p {
+    font-size: 20px;
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+#productos a {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--blanco);
+    /* background: var(--verde); */
+    background-image: url(./imagenes/bg\ aqua\ 1.jpg);
+    background-position: center;
+    background-size: contain;
+    padding: 3px 30px 3px 30px;
+    border-radius: 1rem;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+/* DELIVERY */
+#delivery {
+    display: flex;
+    position: absolute;
+}
+
+/* H2 */
+#nosotros h2,
+#noticias h2,
+#productos h2 {
+    font-size: 30px;
+    text-shadow: 4px 4px 3px var(--verde);
+
+}
+
+/* CONTACTO */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    max-width: unset;
+    width: 100%;
+}
+
+#contacto h2 {
+    color: var(--crema);
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+
+}
+
+.contacto {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    padding: 30px 40px;
+    background-image: url(./imagenes/cafe.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.datos,
+.mapa {
+    width: 50%;
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    order: 2;
+}
+
+.mapa {
+    display: flex;
+}
+
+iframe {
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.75);
+}
+
+.datos h3 {
+    font-weight: 500;
+}
+
+.datos h3,
+.datos p {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-shadow: 3px 3px 4px rgba(255, 255, 255);
+
+
+}
+
+.direccion,
+.telefono,
+.horario,
+.mail {
+    display: flex;
+    gap: 10px;
+    background-color: var(--crema-t);
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    box-shadow: -9px 9px 13px -4px rgba(0, 0, 0, 0.75);
+    border-radius: 1rem;
+    padding: 5px 15px 5px 35px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--verde);
+    border-top: 1px solid var(--crema);
+}
+
+footer p {
+    color: var(--crema);
 }
