@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* COLORES */
+:root {
+    --blanco: rgb(255, 255, 255);
+    --verde: rgb(10, 137, 129);
+    --crema: rgb(235, 206, 188);
+    --crema-t: rgba(235, 206, 188, 0.5);
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background: var(--blanco);
+}
+
+/* SECTION GENERAL */
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+/* HEADER */
+header {
+    background: var(--verde);
+    width: 100%;
+    max-width: 1400px;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+/* LOGO */
+.logo {
+    height: 100%;
+}
+
+/* NAVBAR */
+.navbar,
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    gap: 20px;
+}
+
+.navbar-list {
+    gap: 40px;
+}
+
+.navbar-list a {
+    color: var(--blanco);
+    font-size: 18px;
+}
+
+.navbar-list li:first-child>a {
+    font-weight: 600;
+}
+
+/* CARRITO */
+.cart-icon,
+.menu-icon,
+.user-icon {
+    font-size: 20px;
+    font-size: 600;
+    color: var(--blanco);
+    cursor: pointer;
+    position: relative;
+}
+
+.cart {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background: var(--crema);
+    border-left: 1px solid var(--verde);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    z-index: 2;
+    min-width: 290px;
+    transform: translate(200%);
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart::-webkit-scrollbar {
+    display: none;
+}
+
+.cart h2 {
+    color: var(--verde);
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px 5px;
+}
+
+.cart-total p {
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn-buy,
+.btn-delete {
+    background-color: var(--verde);
+    border-radius: 0.5rem;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.btn-buy {
+    font-size: 22px;
+    font-weight: 500;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+}
+
+.btn-delete {
+    border: none;
+    color: var(--crema);
+}
+
+/* TOGGLE DEL CARRITO PARA JS */
+.open-cart {
+    transform: translate(0%);
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+/* MENU LABEL */
+.menu-label {
+    display: none;
+}
+
+/* HERO */
+#hero {
+    max-width: 1400px;
+    background-image: url(../imagenes/productos/torta.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    height: calc(100vh - 100px);
+}
