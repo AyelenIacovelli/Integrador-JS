@@ -286,14 +286,14 @@ const productsData = [
 const splitProducts = (size) => {
     let dividedProducts = [];
     for (let i = 0; i < productsData.length; i += size) {
-        dividedProducts.push(productsData.slice(i + size))
+        dividedProducts.push(productsData.slice(i, i + size));
     }
     return dividedProducts;
 };
 
 // FUNCION QUE CREA OBJETO DEFINIDOR DE PRODUCTOS POR SLICE
 const productsController = {
-    dividedProducts: splitProducts(6),
+    dividedProducts: splitProducts(8),
     nextProductsIndex: 1,
-    productsLimit: splitProducts(6).length,
+    productsLimit: splitProducts(8).length,
 };

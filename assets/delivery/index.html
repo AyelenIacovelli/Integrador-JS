@@ -24,18 +24,19 @@
             </label>
             <!-- NAVBAR LIST -->
             <ul class="navbar-list">
-                <li><a href="#hero" class="navbar-link">Home</a></li>
-                <li><a href="#nosotros" class="navbar-link">Nosotros</a></li>
-                <li><a href="#noticias" class="navbar-link">Noticias</a></li>
-                <li><a href="#productos" class="navbar-link">Productos</a></li>
-                <li><a href="./assets/delivery/index.html" class="navbar-link">Delivery</a></li>
-                <li><a href="#contacto" class="navbar-link">Contacto</a></li>
-                <li><a href="./assets/Inicio/index.html"><i class="fa-solid fa-user user-icon"></i></a></li>
+                <li><a href="../../index.html" class="navbar-link">Home</a></li>
+                <li><a href="../../index.html #nosotros" class="navbar-link">Nosotros</a></li>
+                <li><a href="../../index.html #noticias" class="navbar-link">Noticias</a></li>
+                <li><a href="../../index.html #productos" class="navbar-link">Productos</a></li>
+                <li><a href="#hero" class="navbar-link">Delivery</a></li>
+                <li><a href="../../index.html #contacto" class="navbar-link">Contacto</a></li>
+                <li><a href="../Inicio/index.html"><i class="fa-solid fa-user user-icon"></i></a></li>
             </ul>
             <!-- CARRITO -->
             <div class="cart-label">
-                <i class="fa-solid fa-cart-shopping cart-icon"></i>
-                <div class="cart-bubble"></div>
+                <i class="fa-solid fa-cart-shopping cart-icon">
+                    <div class="cart-bubble"></div>                
+                </i>                
             </div>
             <div class="cart">
                 <h2>Tus productos</h2>
@@ -54,7 +55,7 @@
     </header>
     <main>
         <section id="hero"></section>
-        <!-- <section id="products"> -->
+        <section id="products">
             <div class="categories">
                 <button class="category active">Todas</button>
                 <button class="category" data-category="alfajor">Alfajores</button>
@@ -66,8 +67,9 @@
             </div>
             <div class="products-container"></div>
             <button class="btn-load">Ver más</button>
-        <!-- </section> -->
+        </section>
     </main>
+    <div class="add-modal"></div>
     <script src="../data.js"></script>
     <script src="../main.js"></script>
 </body>
