@@ -20,7 +20,9 @@
     .navbar-list {
         position: absolute;
         top: 100px;
-        width: 100%;
+        width: 90%;
+        right: 5%;
+        left: 5%;
         flex-direction: column;
         background: var(--verde);
         z-index: 3;
