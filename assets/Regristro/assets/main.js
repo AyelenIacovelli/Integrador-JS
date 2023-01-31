@@ -4,7 +4,7 @@ const form = document.getElementById("form");
 const submitForm = (e) => {
     e.preventDefault();
     if (isValidForm()) {
-        alert("El turno se ha cargado correctamente");
+        alert("Registro realizado");
         form.reset();
     }
 };
