@@ -36,8 +36,8 @@ const checkPhone = () => {
     let valid = false;
     const phoneValue = phoneInput.value.trim();
 
-    if (!isPhoneValid(phoneValue)) {
-        showError(phoneInput, "El número ingresado no es válido");
+    if (!isValidPhone(phoneValue)) {
+        showError(phoneInput, "Número ingresado inválido. Debe contener 10 números");
     } else {
         clearError(phoneInput);
         valid = true;

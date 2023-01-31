@@ -110,6 +110,11 @@ input:focus {
     color: var(--verde);
 }
 
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+
 /* ERROR PARA JS */
 .form__field.error input {
     border: 1px solid #dc3545;
@@ -120,6 +125,7 @@ input:focus {
     max-width: 350px;
     text-align: center;
     padding: 7px 0;
+    font-size: 12px;
 }
 
 /* EXITO PARA JS */

@@ -24,15 +24,15 @@ const isPassSecure = (pass) => {
 // FUNCION QUE MUESTRA ERROR
 const showError = (input, message) => {
     const formField = input.parentElement;
-    formField.classList.add("error");
-    const error = formField.querySelector("small");
+    formField.classList.add(`error`);
+    const error = formField.querySelector(`small`);
     error.textContent = message;
 };
 
 // FUNCION QUE QUITA EL ERROR
 const clearError = (input) => {
     const formField = input.parentElement;
-    formField.classList.remove("error");
-    const error = formField.querySelector("small");
+    formField.classList.remove(`error`);
+    const error = formField.querySelector(`small`);
     error.textContent = "";
 };

@@ -1,0 +1,23 @@
+/* PARA TABLET */
+@media (max-width: 992px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo,
+    .photo-inicio {
+        width: 100%;
+        height: 50vh;
+        max-width: unset;
+    }
+
+    .container {
+        height: unset;
+        padding: 10px 0 10px 0;
+    }
+
+    form {
+        gap: 8px;
+    }
+}

@@ -28,6 +28,10 @@
         z-index: 3;
         display: none;
         gap: 25px;
+        padding: 30px;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        border-top: 1px solid var(--blanco);
     }
 
     /* MOSTRAR ICONO MENU */
@@ -107,6 +111,14 @@
     /* HEADER */
     header {
         background-color: var(--verde);
+    }
+
+    .navbar-list {
+        width: 100%;
+        right: 0;
+        left: 0;
+        height: calc(100vh - 100px);
+        border-radius: unset;
     }
 
     /* HERO */
