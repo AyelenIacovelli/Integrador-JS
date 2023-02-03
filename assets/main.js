@@ -81,37 +81,7 @@ window.addEventListener("scroll", function () {
     header.classList.toggle(`header-bg`, window.scrollY > 350);
 });
 
-// SLIDER EN NOTICIAS
-// const slider = document.querySelector("#slider");
-// let sliderSection = document.querySelectorAll(".card-info");
-// let sliderSectionLast = sliderSection[sliderSection.length - 1];
-// const chevronPost = document.querySelector("#chevron-post");
-// const chevronPre = document.querySelector("#chevron-pre");
 
-// PONGO ULTIMA IMG COMO PRIMERA
-// slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-
-// FUNCION PARA MOVER SIGUIENTE
-// const next = () => {
-//     let sliderSectionFirst = document.querySelectorAll(".card-info")[0];
-//     slider.style.marginLeft = "-200%";
-//     slider.insertAdjacentElement("beforeend", sliderSectionFirst);
-//     slider.style.marginLeft = "-100%";
-// }
-
-// FUNCION PARA MOVER ANTERIOR
-// const prev = () => {
-//     let sliderSection = document.querySelectorAll(".card-info");
-//     let sliderSectionLast = sliderSection[sliderSection.length - 1];
-//     slider.style.marginLeft = "0";
-//     slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-//     slider.style.marginLeft = "-100%";
-// }
-
-// FUNCION PARA QUE SE MUEVA AUTOMATICAMENTE
-// setInterval = (function () {
-//     Next();
-// }, 5000);
 
 
 // MOSTRAR PRODUCTOS EN PAGINA
@@ -434,8 +404,89 @@ const deleteCart = () => {
     completeCartAction("¿Desea borrar su carrito?", "Carrito vacío")
 };
 
+// PRODUCTOS
+// const carrusel = document.querySelector(".galeria");
+
+// let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
+// let intervalo = null;
+// let step = 1;
+
+// PARA QUE EL CARRUSEL VAYA Y VUELVA AUTOMATICAMENTE
+// const start = () => {
+//     intervalo = setInterval(function () {
+//         carrusel.scrollLeft = carrusel.scrollLeft + step;
+//         if (carrusel.scrollLeft === maxScrollLeft) {
+//             step = -1;
+//         } else if (carrusel.scrollLeft === 0) {
+//             step = 1;
+//         }
+//     }, 10);
+// };
+
+// PARA DETENER EL CARRUSEL CON MOUSE
+// const stop = () => {
+//     clearInterval(intervalo);
+// };
+
+// carrusel.addEventListener(`mouseover`, () => {
+//     stop();
+// });
+// carrusel.addEventListener(`mouseout`, () => {
+//     start();
+// });
+
+// start();
+
+
+// SLIDER EN NOTICIAS
+// const slider = document.querySelector("#slider");
+// let sliderSection = document.querySelectorAll(".slider__section");
+// let sliderSectionLast = sliderSection[sliderSection.length - 1];
+// const btnLeft = document.querySelector("#btn-left");
+// const btnRight = document.querySelector("#btn-right");
+
+// PONGO ULTIMA IMG COMO PRIMERA
+// slider.insertAdjacentElement(`afterbegin`, sliderSectionLast);
+
+// FUNCION PARA MOVER SIGUIENTE
+// function next() {
+//     let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
+//     slider.style.marginTop = "-200%";
+//     slider.style.transition = `all 0.5`
+//     setTimeout(function () {
+//         slider.style.transition = `none`
+//         slider.insertAdjacentElement(`beforeend`, sliderSectionFirst)
+//         slider.style.marginTop = `-100%`
+//     }, 500)
+// }
+
+// btnRight.addEventListener(`click`, function () {
+//     next()
+// })
+// const next = () => {
+//     let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
+//     slider.style.marginTop = "-100%";
+//     slider.insertAdjacentElement(`beforeend`, sliderSectionFirst);
+//     slider.style.marginTop = "0";
+// }
+
+// FUNCION PARA MOVER ANTERIOR
+// const prev = () => {
+//     let sliderSection = document.querySelectorAll(".card-info");
+//     let sliderSectionLast = sliderSection[sliderSection.length - 1];
+//     slider.style.marginLeft = "0";
+//     slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+//     slider.style.marginLeft = "-100%";
+// }
+
+// FUNCION PARA QUE SE MUEVA AUTOMATICAMENTE
+// setInterval = (function () {
+//     Next();
+// }, 5000);
+
+
 // FUNCION PUERTA DE ENTRADA
-const init = () => {
+function init() {
     menuBtn.addEventListener(`click`, toggleMenu);
     cartBtn.addEventListener(`click`, toggleCart);
     barsMenu.addEventListener(`click`, closeOnClick);
@@ -453,11 +504,14 @@ const init = () => {
     productsCart.addEventListener(`click`, handleQuantity);
     buyBtn.addEventListener(`click`, completeBuy);
     deleteBtn.addEventListener(`click`, deleteCart);
-    // chevronPost.addEventListener(`click`, next);
-    // chevronPre.addEventListener(`click`, prev);
 
 
 
-};
+    // btnRight.addEventListener(`click`, function () {
+    //     next
+    // })
+    // btnRight.addEventListener(`click`, next);
+    // .addEventListener(`click`, prev);
+}
 
 init();

@@ -33,6 +33,23 @@
                 <li><a href="#contacto" class="navbar-link">Contacto</a></li>
                 <li><a href="./assets/Inicio/index.html"><i class="fa-solid fa-user user-icon"></i></a></li>
             </ul>
+            <!-- CARRITO -->
+            <div class="cart-label">
+                <i class="fa-solid fa-cart-shopping cart-icon">
+                    <div class="cart-bubble"></div>                
+                </i>                
+            </div>
+            <div class="cart">
+                <h2>Tus productos</h2>
+                <div class="cart-container"></div>
+                <span class="divider"></span>
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <span class="total"></span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar carrito</button>
+            </div>
             <!-- OVERLAY -->
             <div class="overlay"></div>
         </nav>            
@@ -83,30 +100,31 @@
             </div>
         </section>
         <section id="noticias"> <!-- // div class="container-slider" -->
-            <h2>Noticias</h2>
+            <!-- <h2>Noticias</h2> -->
             <div class="slider" id="slider">
                 <div class="slider__section">
                     <h3>¡Veganos!</h3>
-                    <img src="./assets/imagenes/choco vegano.jpg" alt="Foto de chocolate vegano">
+                    <img src="./assets/imagenes/choco vegano.jpg" class="slider__img" alt="Foto de chocolate vegano">
                     <p>Probá también nuestros chocolates veganos</p>
                     <span>¡Te van a sorprender!</span>
                 </div>
                 <div class="slider__section">
                     <h3>¡Sé parte de nuestra comunidad!</h3>
-                    <img src="./assets/imagenes/interior.jpg" alt="Interior de la chocolatería">
+                    <img src="./assets/imagenes/interior.jpg" class="slider__img" alt="Interior de la chocolatería">
                     <p>Si tenés nuestra tarjeta de socio, todos los martes disfrutá de un 20% de descuento en toda tu compra consumiendo en el local.</p>
                     <span>¡Retirala en el local!</span>
                 </div>
                 <div class="slider__section">
                     <h3>Lago del Fuerte</h3>
-                    <img src="./assets/imagenes/lago.jpg" alt="Foto del lago">
+                    <img src="./assets/imagenes/lago.jpg" class="slider__img" alt="Foto del lago">
                     <p>Nos encontramos a orillas de las 19 hectáreas de superficie de agua que nos brinda el Lago del Fuerte. Sin dudas poseemos la ubicación más maravillosa de todo Tandil.</p>
                     <span>¡Somos tú espacio soñado!</span>
                 </div>
             </div>
-            <div class="slider__btn slider__btn--left" id="chevron-post"><i class="fa-solid fa-chevron-right"></i></div>
-            <div class="slider__btn slider__btn--right" id="chevron-pre"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="slider__btn slider__btn--left" id="btn-left"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="slider__btn slider__btn--right" id="btn-right"><i class="fa-solid fa-chevron-right"></i></div>
         </section>
+        <!-- PRODUCTOS -->
         <section id="productos">
             <h2>Algunas de nuestras delicias</h2>
             <div class="galeria">
