@@ -82,8 +82,6 @@ window.addEventListener("scroll", function () {
 });
 
 
-
-
 // MOSTRAR PRODUCTOS EN PAGINA
 
 // CONTENEDOR DE PRODUCTOS
@@ -405,84 +403,86 @@ const deleteCart = () => {
 };
 
 // PRODUCTOS
-// const carrusel = document.querySelector(".galeria");
+const carrusel = document.querySelector(".galeria");
 
-// let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
-// let intervalo = null;
-// let step = 1;
+let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
+let intervalo = null;
+let step = 1;
 
 // PARA QUE EL CARRUSEL VAYA Y VUELVA AUTOMATICAMENTE
-// const start = () => {
-//     intervalo = setInterval(function () {
-//         carrusel.scrollLeft = carrusel.scrollLeft + step;
-//         if (carrusel.scrollLeft === maxScrollLeft) {
-//             step = -1;
-//         } else if (carrusel.scrollLeft === 0) {
-//             step = 1;
-//         }
-//     }, 10);
-// };
+const start = () => {
+    intervalo = setInterval(function () {
+        carrusel.scrollLeft = carrusel.scrollLeft + step;
+        if (carrusel.scrollLeft === maxScrollLeft) {
+            step = -1;
+        } else if (carrusel.scrollLeft === 0) {
+            step = 1;
+        }
+    }, 10);
+};
 
 // PARA DETENER EL CARRUSEL CON MOUSE
-// const stop = () => {
-//     clearInterval(intervalo);
-// };
+const stop = () => {
+    clearInterval(intervalo);
+};
 
-// carrusel.addEventListener(`mouseover`, () => {
-//     stop();
-// });
-// carrusel.addEventListener(`mouseout`, () => {
-//     start();
-// });
+carrusel.addEventListener(`mouseover`, () => {
+    stop();
+});
+carrusel.addEventListener(`mouseout`, () => {
+    start();
+});
 
-// start();
+start();
 
 
 // SLIDER EN NOTICIAS
-// const slider = document.querySelector("#slider");
-// let sliderSection = document.querySelectorAll(".slider__section");
-// let sliderSectionLast = sliderSection[sliderSection.length - 1];
-// const btnLeft = document.querySelector("#btn-left");
-// const btnRight = document.querySelector("#btn-right");
+const slider = document.querySelector("#slider");
+let sliderSection = document.querySelectorAll(".slider__section");
+let sliderSectionLast = sliderSection[sliderSection.length - 1];
+const btnLeft = document.querySelector("#btn-left");
+const btnRight = document.querySelector("#btn-right");
 
-// PONGO ULTIMA IMG COMO PRIMERA
-// slider.insertAdjacentElement(`afterbegin`, sliderSectionLast);
+// // PONGO ULTIMA IMG COMO PRIMERA
+slider.insertAdjacentElement(`afterbegin`, sliderSectionLast);
 
 // FUNCION PARA MOVER SIGUIENTE
-// function next() {
-//     let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
-//     slider.style.marginTop = "-200%";
-//     slider.style.transition = `all 0.5`
-//     setTimeout(function () {
-//         slider.style.transition = `none`
-//         slider.insertAdjacentElement(`beforeend`, sliderSectionFirst)
-//         slider.style.marginTop = `-100%`
-//     }, 500)
-// }
+function Next() {
+    let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
+    slider.style.marginLeft = `-200%`;
+    slider.style.transition = `all 0.5s`;
+    setTimeout(function () {
+        slider.style.transition = `none`;
+        slider.insertAdjacentElement(`beforeend`, sliderSectionFirst);
+        slider.style.marginLeft = `-100%`;
+    }, 500);
+};
 
-// btnRight.addEventListener(`click`, function () {
-//     next()
-// })
-// const next = () => {
-//     let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
-//     slider.style.marginTop = "-100%";
-//     slider.insertAdjacentElement(`beforeend`, sliderSectionFirst);
-//     slider.style.marginTop = "0";
-// }
+btnRight.addEventListener(`click`, function () {
+    Next();
+});
 
 // FUNCION PARA MOVER ANTERIOR
-// const prev = () => {
-//     let sliderSection = document.querySelectorAll(".card-info");
-//     let sliderSectionLast = sliderSection[sliderSection.length - 1];
-//     slider.style.marginLeft = "0";
-//     slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-//     slider.style.marginLeft = "-100%";
-// }
+function Prev() {
+    let sliderSection = document.querySelectorAll(".slider__section");
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    slider.style.marginLeft = `0`;
+    slider.style.transition = `all 0.5s`;
+    setTimeout(function () {
+        slider.style.transition = `none`;
+        slider.insertAdjacentElement(`afterbegin`, sliderSectionLast);
+        slider.style.marginLeft = `-100%`;
+    }, 500);
+};
+
+btnLeft.addEventListener(`click`, function () {
+    Prev();
+});
 
 // FUNCION PARA QUE SE MUEVA AUTOMATICAMENTE
-// setInterval = (function () {
-//     Next();
-// }, 5000);
+setInterval(function () {
+    Next();
+}, 5000);
 
 
 // FUNCION PUERTA DE ENTRADA

@@ -30,19 +30,19 @@ main {
 }
 
 /* SECTION GENERAL */
-section {
+/* section {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px 10px;
-}
+} */
 
 /* HEADER */
 header {
     background: none;
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     height: 100px;
     position: fixed;
     top: 0;
@@ -73,6 +73,7 @@ header {
 
 .navbar {
     gap: 20px;
+    max-width: 1400px;
 }
 
 .navbar-list {
@@ -112,7 +113,7 @@ header {
     overflow-y: scroll;
     z-index: 2;
     min-width: 290px;
-    transform: translate(200%);
+    transform: translate(900%);
 }
 
 .cart-container {
@@ -405,31 +406,55 @@ h1 {
 
 /* NOTICIAS */
 #noticias {
-    max-width: 800px;
-    max-height: 600px;
+    max-width: 1200px;
+    /* height: 1000px; */
     width: 90%;
     margin: auto;
     overflow: hidden;
     position: relative;
-    display: flex;
-}
-
-.slider {
-    width: 800;
-    height: 300%;
     /* display: flex; */
 }
 
+.slider {
+    width: 300%;
+    display: flex;
+    margin-left: -100%;
+}
+
 .slider__section {
-    width: 100%;
-    height: 600px;
+    width: 80%;
+    max-width: 1200px;
+    /* height: 600px; */
+}
+
+.slider__title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--verde);
 }
 
 .slider__img {
     width: 100%;
-    height: 400px;
+    height: 500px;
     display: block;
     object-fit: cover;
+    border-radius: 1rem;
+}
+
+.slider__p {
+    font-size: 25px;
+    text-align: center;
+    padding: 15px;
+}
+
+.slider__span {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--verde);
+    justify-content: center;
+    display: flex;
+    padding-bottom: 30px;
 }
 
 .slider__btn {
@@ -454,6 +479,8 @@ h1 {
     left: 10px;
 }
 
+*/
+
 /* PRODUCTOS */
 #productos {
     display: flex;
@@ -463,8 +490,16 @@ h1 {
     background-size: cover;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 25px;
+    padding: 20px 0;
 }
+
+#productos h2 {
+    text-align: center;
+    border-top: 2px solid var(--verde);
+}
+
 
 .galeria {
     max-width: 930px;
@@ -492,8 +527,11 @@ h1 {
 
 #productos p {
     font-size: 20px;
-    color: var(--blanco);
+    color: var(--verde);
     font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid var(--verde);
+    padding-bottom: 30px;
 }
 
 #productos a {
@@ -510,9 +548,105 @@ h1 {
 }
 
 /* DELIVERY */
-#delivery {
+
+#products {
     display: flex;
-    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px 0;
+    max-width: 1400px;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category {
+    background: var(--crema);
+    border: none;
+    padding: 10px 15px;
+    color: var(--blanco);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.active {
+    background: var(--verde);
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--blanco);
+    padding: 20px;
+}
+
+.product img {
+    width: 280px;
+    height: 280px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.product-bot {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-bot span {
+    font-weight: 600;
+}
+
+.btn-add {
+    cursor: pointer;
+    padding: 10px 35px;
+    color: var(--crema);
+    background: var(--verde);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.btn-load {
+    background: var(--verde);
+    border: none;
+    padding: 10px 35px;
+    color: var(--blanco);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+/* OCULTAR BOTON PARA JS */
+.hidden {
+    display: none;
 }
 
 /* H2 */
@@ -521,7 +655,10 @@ h1 {
 #productos h2 {
     font-size: 30px;
     text-shadow: 4px 4px 3px var(--verde);
+}
 
+#productos h2 {
+    padding-top: 30px;
 }
 
 /* CONTACTO */

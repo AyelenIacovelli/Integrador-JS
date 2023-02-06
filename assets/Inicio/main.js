@@ -57,7 +57,7 @@ const checkPass = () => {
     if (isEmpty(pass)) {
         showError(passInput, "La contraseña es obligatoria");
     } else if (!isPassSecure(pass)) {
-        showError(passInput, "La contraseña es incorrecta");
+        showError(passInput, "La contraseña debe tener al menos ocho letras, una mayúscula, un número y un símbolo");
     } else {
         clearError(passInput);
         valid = true;
