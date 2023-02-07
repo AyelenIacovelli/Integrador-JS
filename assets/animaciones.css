@@ -70,3 +70,12 @@ html {
 #productos a:hover {
     color: var(--crema);
 }
+
+/* DELIVERY */
+.btn-add:hover {
+    color: var(--crema);
+}
+
+.btn-load:hover {
+    font-weight: 600;
+}

@@ -121,6 +121,14 @@
         border-radius: unset;
     }
 
+    .cart-item {
+        flex-direction: column;
+    }
+
+    .item-price {
+        text-align: center;
+    }
+
     /* HERO */
     #hero {
         display: none;
@@ -129,6 +137,11 @@
     /* NOSOTROS */
     #nosotros {
         margin-top: 0;
+        padding-top: 30px;
+        gap: 30px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .order {
@@ -154,10 +167,9 @@
     }
 
     /* PRODUCTOS */
-    /* .galeria {
-        flex-direction: column;
-    } */
-
+    .galeria {
+        max-width: 90vw;
+    }
 
     /* CONTACTO */
     .mapa {

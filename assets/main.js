@@ -30,6 +30,7 @@ const toggleMenu = () => {
     }
     overlay.classList.toggle(`show-overlay`);
     header.classList.toggle(`header-bg`);
+    header.classList.add(`header-bg`, window.scrollY > 350);
 };
 
 // FUNCION CLICK CARRITO
@@ -41,6 +42,7 @@ const toggleCart = () => {
     }
     overlay.classList.toggle(`show-overlay`);
     header.classList.toggle(`header-bg`);
+    header.classList.add(`header-bg`, window.scrollY > 350);
 };
 
 // FUNCION CERRAR CARRITO CUANDO SE CLICKEA NAVBAR
@@ -103,8 +105,7 @@ const renderProduct = (product) => {
                 <h3>${name}</h3>
                 <div class="product-bot">
                     <span>$${bid}</span>
-                    <button>+ y -</button>
-                    <button class="btn-add" data-id="${id}" data-name="${name}" data-bid="${bid}" data-img="${img}">Comprar</button>
+                    <button class="btn-add" data-id="${id}" data-name="${name}" data-bid="${bid}" data-img="${img}">Añadir</button>
                 </div>
             </div>
     </div>
@@ -482,7 +483,7 @@ btnLeft.addEventListener(`click`, function () {
 // FUNCION PARA QUE SE MUEVA AUTOMATICAMENTE
 setInterval(function () {
     Next();
-}, 5000);
+}, 8000);
 
 
 // FUNCION PUERTA DE ENTRADA

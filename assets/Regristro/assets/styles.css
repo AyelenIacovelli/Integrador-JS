@@ -81,6 +81,7 @@ form {
 h1 {
     text-align: center;
     color: var(--verde);
+    text-shadow: 1px 1px 2px black;
 }
 
 form input {
@@ -104,6 +105,13 @@ input:focus {
     color: var(--crema);
     border-radius: 1rem;
     padding: 10px 15px;
+}
+
+.form__submit__btn {
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--verde);
+    color: var(--crema);
 }
 
 .question {

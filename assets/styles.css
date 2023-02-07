@@ -133,18 +133,12 @@ header {
     padding: 15px 5px;
 }
 
-.cart-total p {
-    color: var(--blanco);
-    font-size: 20px;
-    font-weight: 500;
-}
-
 .cart-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    padding: 15px;
 }
 
 .cart-item img {
@@ -180,7 +174,6 @@ header {
 
 .item-handler {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -225,13 +218,15 @@ header {
     width: 100%;
 }
 
+
 .cart-total p {
     color: var(--verde);
+    font-size: 18px;
 }
 
 .cart-total span {
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 18px;
     color: var(--verde);
 }
 
@@ -310,6 +305,8 @@ header {
     transform: translateY(200%);
     transition: all 0.5s ease-out;
     padding: 20px 0;
+    width: 100%;
+    text-align: center;
 }
 
 /* MOSTRAR MODAL PARA JS */
@@ -412,6 +409,7 @@ h1 {
     margin: auto;
     overflow: hidden;
     position: relative;
+    padding: 30px 0;
     /* display: flex; */
 }
 
@@ -424,14 +422,21 @@ h1 {
 .slider__section {
     width: 80%;
     max-width: 1200px;
-    /* height: 600px; */
+}
+
+.info_bg {
+    background-image: url(./imagenes/bg\ patron.jpg);
+    background-size: cover;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .slider__title {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 35px;
     text-align: center;
     color: var(--verde);
+    padding-bottom: 30px;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
 
 .slider__img {
@@ -439,22 +444,25 @@ h1 {
     height: 500px;
     display: block;
     object-fit: cover;
-    border-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
 }
 
 .slider__p {
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
     padding: 15px;
+    text-shadow: 1px 1px 2px var(--verde);
 }
 
 .slider__span {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 600;
     color: var(--verde);
     justify-content: center;
     display: flex;
     padding-bottom: 30px;
+    text-shadow: 1px 1px 3px black;
 }
 
 .slider__btn {
@@ -493,6 +501,7 @@ h1 {
     text-align: center;
     gap: 25px;
     padding: 20px 0;
+    max-width: 1400px;
 }
 
 #productos h2 {
@@ -526,7 +535,7 @@ h1 {
 }
 
 #productos p {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--verde);
     font-weight: 600;
     text-align: center;
@@ -574,6 +583,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .category {
@@ -583,6 +593,7 @@ h1 {
     color: var(--blanco);
     border-radius: 0.5rem;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .active {
@@ -607,6 +618,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
 }
 
@@ -618,31 +630,33 @@ h1 {
 .product-bot {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .product-bot span {
+    font-size: 20px;
     font-weight: 600;
+    text-align: center;
 }
 
 .btn-add {
     cursor: pointer;
     padding: 10px 35px;
-    color: var(--crema);
+    color: var(--blanco);
     background: var(--verde);
     border-radius: 0.5rem;
     border: none;
 }
 
 .btn-load {
-    background: var(--verde);
+    background: none;
     border: none;
     padding: 10px 35px;
-    color: var(--blanco);
-    border-radius: 10px;
+    color: var(--verde);
+    font-size: 20px;
+    font-weight: 500;
     cursor: pointer;
 }
-
-
 
 /* OCULTAR BOTON PARA JS */
 .hidden {
@@ -668,6 +682,7 @@ h1 {
     background-color: black;
     max-width: unset;
     width: 100%;
+    align-items: center;
 }
 
 #contacto h2 {
@@ -720,8 +735,6 @@ iframe {
     font-weight: 600;
     color: black;
     text-shadow: 3px 3px 4px rgba(255, 255, 255);
-
-
 }
 
 .direccion,
