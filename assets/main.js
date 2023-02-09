@@ -403,6 +403,23 @@ const deleteCart = () => {
     completeCartAction("¿Desea borrar su carrito?", "Carrito vacío")
 };
 
+// FUNCION PARA QUE APAREZCAN LOS ELEMENTOS AL SCROLLEAR
+let animado = document.querySelectorAll(".animado");
+
+function mostrarScroll() {
+    let scrollTop = document.documentElement.scrollTop;
+    for (var i = 0; i < animado.length; i++) {
+        let alturaAnimado = animado[i].offsetTop;
+        if (alturaAnimado - 500 < scrollTop) {
+            animado[i].style.opacity = 1;
+            animado[i].classList.add(`mostrarArriba`);
+        }
+    }
+};
+
+
+
+
 // PRODUCTOS
 const carrusel = document.querySelector(".galeria");
 
@@ -505,14 +522,7 @@ function init() {
     productsCart.addEventListener(`click`, handleQuantity);
     buyBtn.addEventListener(`click`, completeBuy);
     deleteBtn.addEventListener(`click`, deleteCart);
-
-
-
-    // btnRight.addEventListener(`click`, function () {
-    //     next
-    // })
-    // btnRight.addEventListener(`click`, next);
-    // .addEventListener(`click`, prev);
+    window.addEventListener(`scroll`, mostrarScroll);
 }
 
 init();

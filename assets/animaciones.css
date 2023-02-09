@@ -65,6 +65,22 @@ html {
     transition: all 0.2s ease-in;
 }
 
+.btn-buy:hover {
+    text-shadow: -2px -2px 2px black;
+}
+
+.btn-delete:hover {
+    color: var(--blanco);
+}
+
+.up:hover {
+    box-shadow: 1px -1px 2px black;
+}
+
+.down:hover {
+    box-shadow: -1px 1px 2px black;
+}
+
 /* NOSOTROS */
 .info a:hover,
 #productos a:hover {
