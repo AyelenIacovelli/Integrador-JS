@@ -6,6 +6,9 @@
     --blanco: rgb(255, 255, 255);
     --verde: rgb(10, 137, 129);
     --crema: rgb(235, 206, 188);
+    --negro: rgb(0, 0, 0);
+    --rojo-input: rgb(220, 53, 69);
+    --verde-input: rgb(40, 167, 69);
 }
 
 /* GENERAL */
@@ -81,7 +84,7 @@ form {
 h1 {
     text-align: center;
     color: var(--verde);
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 1px 1px 2px var(--negro);
 }
 
 form input {
@@ -105,6 +108,7 @@ input:focus {
     color: var(--crema);
     border-radius: 1rem;
     padding: 10px 15px;
+    cursor: pointer;
 }
 
 .form__submit__btn {
@@ -126,11 +130,11 @@ input:focus {
 
 /* ERROR PARA JS */
 .form__field.error input {
-    border: 1px solid #dc3545;
+    border: 1px solid var(--rojo-input);
 }
 
 .form__field small {
-    color: #dc3545;
+    color: var(--rojo-input);
     max-width: 350px;
     text-align: center;
     padding: 7px 0;
@@ -139,5 +143,5 @@ input:focus {
 
 /* EXITO PARA JS */
 .form__field.success input {
-    border: 1px solid #28a745;
+    border: 1px solid var(--verde-input);
 }
