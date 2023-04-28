@@ -215,12 +215,12 @@ const renderCardProduct = (cartProduct) => {
     const { id, name, bid, img, quantity } = cartProduct
     return `
     <div class="cart-item">
-    <img src="${img}" alt="${name}">
-    <div class="item-info">
-        <h3 class="item-title">${name}</h3>
-        <p class="item-bid">Precio actual</p>
-        <span class="item-price">$${bid}</span>
-    </div>
+        <img src="${img}" alt="${name}">
+        <div class="item-info">
+            <h3 class="item-title">${name}</h3>
+            <p class="item-bid">Precio actual</p>
+            <span class="item-price">$${bid}</span>
+        </div>
     <div class="item-handler">
         <span class="quantity-handler down" data-id="${id}">-</span>
         <span class="item-quantity">${quantity}</span>

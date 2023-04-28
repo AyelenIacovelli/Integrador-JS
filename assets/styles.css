@@ -115,6 +115,7 @@ header {
     min-width: 290px;
     transform: translate(900%);
     padding-bottom: 70px;
+    max-width: 50%;
 }
 
 .cart-container {
@@ -161,6 +162,7 @@ header {
     color: var(--verde);
     text-shadow: -2px 1px 2px var(--negro);
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .item-bid {
@@ -176,6 +178,10 @@ header {
     font-weight: 600;
     text-shadow: -2px -1px 1px var(--negro);
     letter-spacing: 1px;
+}
+
+.item-price{
+    text-align: center;
 }
 
 .item-handler {

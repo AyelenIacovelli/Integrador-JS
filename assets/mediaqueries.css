@@ -194,6 +194,50 @@
         text-align: center;
     }
 
+    /* NOTICIAS */
+    .slider__img {
+        display: none;
+    }
+
+    .info_bg {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    .fecha {
+        flex-direction: row;
+        padding: 5px 10px;
+    }
+
+    .fecha span {
+        font-size: 12px;
+    }
+
+    .slider__btn {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        display: flex;
+        color: var(--blanco);
+        background: none;
+    }
+
+    .slider__p {
+        padding: 0 45px;
+    }
+
+    .slider__title {
+        padding: 30px;
+    }
+
+    .slider__span {
+        text-align: center;
+    }
+
+    .info_bg {
+        height: 100%;
+    }
+
     /* PRODUCTOS */
     #productos {
         display: flex;
